@@ -35,6 +35,7 @@ jobs:
         now_project: "action-phpcov"
         now_token: ${{ secrets.NOW_TOKEN }}
         phpunit: "./vendor/bin/phpunit --testdox"
-        url:
-          description: ""
+        outputs:
+          url:
+            description: "test"
     - run: curl "${{ steps.phpcov.outputs.url }}"
